@@ -1,5 +1,19 @@
-<h1>{{ cohortCtrl.title }}</h1>
+<div class="row">
+  <div class="col-md-4">
+    <h1>All Cohorts</h1>
+    <ul>
+      <div ng-repeat="cohort in cohortsCtrl.cohorts">
+        <li><a ui-sref="cohorts.cohort({id: cohort.id})">{{ cohort.name }}</a></li>
+      </div>
+    </ul>
+    <form ng-submit="cohortsCtrl.create()">
+      <label>Add a Cohort</label>
+      <input type="text" class="form-control" ng-model="cohortsCtrl.newCohort.name">
+      <input type="submit" class="btn btn-primary" value="Create a Cohort">
+    </form>
+  </div>
 
-<div ng-repeat="cohort in cohortCtrl.cohorts">
-  {{ cohort.name }}
+  <div class="col-md-8">
+    <ui-view></ui-view>
+  </div>
 </div>
