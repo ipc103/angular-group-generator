@@ -3,7 +3,10 @@
     <h1>All Cohorts</h1>
     <ul>
       <div ng-repeat="cohort in cohortsCtrl.cohorts">
-        <li><a ui-sref="cohorts.cohort({id: cohort.id})">{{ cohort.name }}</a></li>
+        <li>
+          <a ui-sref="cohorts.cohort({id: cohort.id})">{{ cohort.name }}</a>
+          <button type="button" class="btn btn-danger" ng-click="cohortsCtrl.delete($index)">Delete</button>
+        </li>
       </div>
     </ul>
     <form ng-submit="cohortsCtrl.create()">
