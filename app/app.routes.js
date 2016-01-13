@@ -17,4 +17,10 @@ groupApp.config(function($stateProvider){
       templateUrl: '/app/components/cohorts/cohort/cohorts.cohort.html',
       controller: 'CohortCtrl as cohortCtrl'
     })
+
+    .state('cohorts.cohort.groups', {
+      url: '/groups',
+      templateUrl: '/app/components/groups/groups.html',
+      controller: 'GroupsController as groupsCtrl'
+    })
 })

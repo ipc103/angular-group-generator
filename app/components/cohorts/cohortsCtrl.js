@@ -2,6 +2,7 @@ groupApp.controller('CohortsCtrl', ['Cohort', function(Cohort){
   //index
   this.newCohort = new Cohort({name: ''});
   this.cohorts = Cohort.query();
+  this.name = '';
 
   //create
   this.create = function(){
@@ -16,7 +17,7 @@ groupApp.controller('CohortsCtrl', ['Cohort', function(Cohort){
   // delete
   this.delete = function(index){
     var cohort = this.cohorts[index];
-    cohort.$delete({id: cohort.id}); // why do I need to pass the id to $delete when I call it on an instance? 
+    cohort.$delete({id: cohort.id}); // why do I need to pass the id to $delete when I call it on an instance?
     this.cohorts.splice(index, 1);
   }
 

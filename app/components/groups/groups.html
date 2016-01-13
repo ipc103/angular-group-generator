@@ -1,0 +1,12 @@
+<h4>Groups For This Cohort</h4>
+
+<ul>
+  <div ng-repeat="group in groupsCtrl.groups">
+    <li>{{ group.code }}</li>
+      <ul>
+        <div ng-repeat="student in group.students">
+          {{ student.name }}
+        </div>
+      </ul>
+  </div>
+</ul>
