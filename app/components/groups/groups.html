@@ -1,12 +1,18 @@
-<h4>Groups For This Cohort</h4>
+<div ng-if="groupsCtrl.groups.length === 0">
+  <h4>This Cohort Has No Groups</h4>
+</div>
 
-<ul>
-  <div ng-repeat="group in groupsCtrl.groups">
-    <li>{{ group.code }}</li>
-      <ul>
-        <div ng-repeat="student in group.students">
-          {{ student.name }}
-        </div>
-      </ul>
-  </div>
-</ul>
+<div ng-if="groupsCtrl.groups.length !== 0">
+  <h4>Groups For This Cohort</h4>
+
+  <ul>
+    <div ng-repeat="group in groupsCtrl.groups">
+      <li>{{ group.code }}</li>
+        <ul>
+          <div ng-repeat="student in group.students">
+            {{ student.name }}
+          </div>
+        </ul>
+    </div>
+  </ul>
+</div>
