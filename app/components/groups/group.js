@@ -1,3 +1,3 @@
 groupApp.factory('Group', ['$resource', function($resource){
-  return $resource('http://localhost:3000/api/groups/:id');
+  return $resource('http://localhost:3000/api/groups/:id',{}, {save: {method: 'POST', isArray: false}});
 }])

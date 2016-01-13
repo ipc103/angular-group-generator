@@ -1,9 +1,10 @@
+<button type="button" class="btn btn-primary" ng-click="groupsCtrl.createGroups()">Create Pair Programming Groups</button>
+<h4>Groups For This Cohort</h4>
 <div ng-if="groupsCtrl.groups.length === 0">
   <h4>This Cohort Has No Groups</h4>
 </div>
 
 <div ng-if="groupsCtrl.groups.length !== 0">
-  <h4>Groups For This Cohort</h4>
 
   <ul>
     <div ng-repeat="group in groupsCtrl.groups">
