@@ -6,7 +6,8 @@
 <div ng-if="groupsCtrl.groups.length !== 0">
   <label for="query">Filter By Student Name</label>
   <input type="text" ng-model="query">
-  <button type="button" class="btn btn-primary" ng-click="groupsCtrl.createGroups('2')">Create Pair Programming Groups</button>
+  <button type="button" class="btn btn-primary" ng-click="groupsCtrl.createGroups('2')">Create New Groups of 2</button>
+  <button type="button" class="btn btn-primary" ng-click="groupsCtrl.createGroups('4')">Create New Groups of 4</button>
   <ul>
     <div ng-repeat="group in groupsCtrl.groups | filter:query | orderBy: group.code">
       <li>{{ group.code }}</li>
