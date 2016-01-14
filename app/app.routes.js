@@ -12,13 +12,13 @@ groupApp.config(function($stateProvider){
       controller: 'CohortsCtrl as cohortsCtrl'
     })
 
-    .state('cohorts.cohort', {
-      url: '/:id',
+    .state('cohort', {
+      url: '/cohorts/:id',
       templateUrl: '/app/components/cohorts/cohort/cohorts.cohort.html',
       controller: 'CohortCtrl as cohortCtrl'
     })
 
-    .state('cohorts.cohort.groups', {
+    .state('cohort.groups', {
       url: '/groups',
       templateUrl: '/app/components/groups/groups.html',
       controller: 'GroupsController as groupsCtrl'

@@ -4,7 +4,7 @@
     <ul>
       <div ng-repeat="cohort in cohortsCtrl.cohorts">
         <li>
-          <a ui-sref="cohorts.cohort({id: cohort.id})">{{ cohort.name }}</a>
+          <a ui-sref="cohort({id: cohort.id})">{{ cohort.name }}</a>
           <button type="button" class="btn btn-danger" ng-click="cohortsCtrl.delete($index)">Delete</button>
         </li>
       </div>
@@ -16,7 +16,4 @@
     </form>
   </div>
 
-  <div class="col-md-8">
-    <ui-view></ui-view>
-  </div>
 </div>
