@@ -4,9 +4,11 @@
 </div>
 
 <div ng-if="groupsCtrl.groups.length !== 0">
+  <label for="query">Filter By Student Name</label>
+  <input type="text" ng-model="query">
   <button type="button" class="btn btn-primary" ng-click="groupsCtrl.createGroups()">Create Pair Programming Groups</button>
   <ul>
-    <div ng-repeat="group in groupsCtrl.groups">
+    <div ng-repeat="group in groupsCtrl.groups | filter:query | orderBy: group.code">
       <li>{{ group.code }}</li>
         <ul>
           <div ng-repeat="student in group.students">
